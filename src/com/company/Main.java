@@ -27,7 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        char choice;
+        String choice;
 
         while(true){
             System.out.println("Enter the number: ");
@@ -44,11 +44,11 @@ public class Main {
                 }
             }
 
-            System.out.print("\nwould like to input another number ? Type y or n: ");
-            choice = keyboard.next().charAt(0);
-            if(choice == 'y' || choice == 'Y'){
+            System.out.print("\nWould like to input another number Y / N ?");
+            choice = keyboard.next();
+            if(choice.equalsIgnoreCase("y")){
                 continue;
-            } else {
+            } else if (choice.equalsIgnoreCase("n")){
                 break;
             }
         }
